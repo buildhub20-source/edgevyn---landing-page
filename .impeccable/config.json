@@ -1,0 +1,21 @@
+{
+    "detector":  {
+                     "ignoreRules":  [
+
+                                     ],
+                     "ignoreFiles":  [
+
+                                     ],
+                     "ignoreValues":  [
+                                          {
+                                              "rule":  "cramped-padding",
+                                              "value":  "*",
+                                              "files":  [
+                                                            "index.html"
+                                                        ],
+                                              "createdAt":  "2026-11-26T06:05:38.335Z",
+                                              "reason":  "agent decision: editorial hairline grid from the pinned monodrift reference; columns align flush to rules by design, every cell keeps internal padding on its open side"
+                                          }
+                                      ]
+                 }
+}

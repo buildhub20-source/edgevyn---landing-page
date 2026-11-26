@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T00:00:00Z",
+  "title": "Design System: Edgevyn",
+  "extensions": {
+    "colorMeta": {
+      "ember": { "role": "primary", "displayName": "Ember", "canonical": "#FF6B35", "tonalRamp": ["#3A1305", "#5E200B", "#8A3112", "#B9431A", "#E8541E", "#FF6B35", "#FF9A73", "#FFD3C0"] },
+      "ember-deep": { "role": "primary", "displayName": "Ember Deep", "canonical": "#E8541E", "tonalRamp": ["#33110a", "#561c0c", "#7d2a10", "#a83816", "#E8541E", "#f27a4d", "#f8a585", "#fcd6c6"] },
+      "on-ember": { "role": "primary", "displayName": "On-Ember", "canonical": "#08090D", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "cobalt": { "role": "secondary", "displayName": "Cobalt", "canonical": "#3B7AD9", "tonalRamp": ["#0B1A33", "#12294F", "#1B3B73", "#2A5AA6", "#3B7AD9", "#5E93E3", "#8DB4F0", "#CFE0F9"] },
+      "cobalt-soft": { "role": "secondary", "displayName": "Cobalt Soft", "canonical": "#8DB4F0", "tonalRamp": ["#0B1A33", "#12294F", "#1B3B73", "#2A5AA6", "#3B7AD9", "#5E93E3", "#8DB4F0", "#CFE0F9"] },
+      "ground": { "role": "neutral", "displayName": "Ground", "canonical": "#08090D", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "ground-deep": { "role": "neutral", "displayName": "Ground Deep", "canonical": "#050608", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#11141B", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "graphite-raised": { "role": "neutral", "displayName": "Graphite Raised", "canonical": "#181C25", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "rgba(243, 244, 246, 0.11)", "tonalRamp": ["rgba(243,244,246,0.04)", "rgba(243,244,246,0.08)", "rgba(243,244,246,0.11)", "rgba(243,244,246,0.16)", "rgba(243,244,246,0.24)", "rgba(243,244,246,0.35)", "rgba(243,244,246,0.5)", "rgba(243,244,246,0.7)"] },
+      "hairline-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "rgba(243, 244, 246, 0.24)", "tonalRamp": ["rgba(243,244,246,0.04)", "rgba(243,244,246,0.08)", "rgba(243,244,246,0.11)", "rgba(243,244,246,0.16)", "rgba(243,244,246,0.24)", "rgba(243,244,246,0.35)", "rgba(243,244,246,0.5)", "rgba(243,244,246,0.7)"] },
+      "bone": { "role": "neutral", "displayName": "Bone", "canonical": "#F3F4F6", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "canonical": "#A9B0BC", "tonalRamp": ["#050608", "#08090D", "#11141B", "#181C25", "#2A303C", "#5A6170", "#A9B0BC", "#F3F4F6"] },
+      "intro-navy": { "role": "neutral", "displayName": "Intro Navy", "canonical": "#000631", "tonalRamp": ["#00020f", "#000631", "#0a1350", "#1a2470", "#2f3a91", "#5560b0", "#8a92cf", "#c8ccec"] },
+      "signal-error": { "role": "neutral", "displayName": "Signal Error", "canonical": "#FF8A8A", "tonalRamp": ["#3a0b0b", "#5e1414", "#8a2222", "#b93a3a", "#e85a5a", "#FF8A8A", "#ffb3b3", "#ffdede"] }
+    },
+    "typographyMeta": {
+      "display-xl": { "displayName": "Display XL", "purpose": "The closing call only." },
+      "hero": { "displayName": "Hero", "purpose": "The hero headline; sized by min(vw, vh) so short wide screens keep the action in view." },
+      "display": { "displayName": "Display", "purpose": "Section headings, the statement band, outlined process numerals." },
+      "statement": { "displayName": "Statement", "purpose": "The sentence-case who-we-are paragraph that lights word by word on scroll." },
+      "title": { "displayName": "Title", "purpose": "Practice names, card and step titles, fact headings, media card title, contact CTA." },
+      "cta-hero": { "displayName": "CTA Hero", "purpose": "The hero's full-width Book a call block, height-aware like the headline." },
+      "nav": { "displayName": "Nav", "purpose": "Uppercase menu links (400) and the nav CTA (700)." },
+      "label": { "displayName": "Label", "purpose": "Uppercase 13px tags, field labels, window titles, work category lines, step outputs, footer heads." },
+      "body": { "displayName": "Body", "purpose": "Reading text, 18px/1.6 with tabular numerals." },
+      "body-sm": { "displayName": "Body Small", "purpose": "Section subs, card descriptions, fact and step text." }
+    },
+    "shadows": [
+      { "name": "deep-drop", "value": "0 40px 80px -30px rgba(0, 0, 0, 0.85), 0 2px 0 rgba(0, 0, 0, 0.5)", "purpose": "Grounds objects floating in depth: hero product windows, the hero media card, tilted accordion screenshots." },
+      { "name": "two-light-rim", "value": "border: 1px solid transparent; background: linear-gradient(var(--surface), var(--surface)) padding-box, linear-gradient(var(--ang, 135deg), #3B7AD9, rgba(243,244,246,0.08) 38%, rgba(243,244,246,0.08) 62%, #FF6B35) border-box", "purpose": "The edge of every raised panel; on work panels the angle follows the pointer." },
+      { "name": "glare", "value": "radial-gradient(600px circle at var(--gx) var(--gy), rgba(255, 255, 255, 0.16), transparent 45%)", "purpose": "White specular following the pointer across a work panel on hover." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default easing for hovers, tilts, lifts and underline grows (expo-out character)." },
+      { "name": "ease-curtain", "value": "cubic-bezier(0.76, 0, 0.24, 1)", "purpose": "The intro overlay's 0.7s clip-path lift (overlay removed 750ms after)." },
+      { "name": "intro-timing", "value": "playbackRate 2.2; lift when film time >= 3.6s and page loaded; safety cap 4000ms", "purpose": "Keeps the once-per-session intro short (about 2.7s on a local load)." },
+      { "name": "section-rise", "value": "y 70px, rotateX -18deg to 0, 1.1s expo.out, stagger 0.1s, at 82% viewport", "purpose": "Section entrances by position and tilt; content is never hidden by opacity." },
+      { "name": "hero-recede", "value": "--recede 0 to 1 scrubbed over the hero: translateY -70px, translateZ -280px, rotateX +16deg, rotateY -26deg", "purpose": "The hero window stack pulls back in depth as the page scrolls." },
+      { "name": "pointer-tilt", "value": "hero stack rotateY -16deg +/- 11deg, rotateX 8deg +/- 7deg; work panels up to 8deg Y, 6deg X; 0.5 to 0.6s transition", "purpose": "Depth answers the pointer on fine-pointer devices only." },
+      { "name": "smooth-scroll", "value": "Lenis lerp 0.1, driven by the GSAP ticker; anchor scroll 1.4s", "purpose": "Ties scroll-scrubbed effects together; stopped during the intro." },
+      { "name": "reduced-motion", "value": "all transitions 0.01ms; no GSAP; field renders one still frame; ring and intro skipped", "purpose": "The page reads complete and still." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "560px" },
+      { "name": "tablet", "value": "900px" },
+      { "name": "steps-two-up", "value": "1100px" },
+      { "name": "short-desktop", "value": "(min-width: 901px) and (max-height: 820px)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Nav CTA: the ember action fill with dark text and a sliding chevron.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Book a call <svg class=\"ds-chev\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 5l7 7-7 7\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: #08090D; background: #FF6B35; border: 0; border-radius: 0; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), transform 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: #E8541E; } .ds-btn-primary:hover .ds-chev { transform: translateX(4px); } .ds-btn-primary:active { transform: translateY(1px) scale(0.99); } .ds-btn-primary:focus-visible { outline: 2px solid #FF6B35; outline-offset: 3px; } .ds-chev { width: 0.9em; height: 0.9em; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: square; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); }"
+    },
+    {
+      "name": "Block CTA",
+      "kind": "button",
+      "refersTo": "button-block",
+      "description": "Full-width hero and form action, sized by min(vw, vh).",
+      "html": "<button class=\"ds-btn-block\" type=\"button\">Book a call <svg class=\"ds-chev\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-block { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px; padding: clamp(14px, 2.2vh, 22px) 24px; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: clamp(22px, min(2.4vw, 3.6vh), 36px); letter-spacing: 0.04em; text-transform: uppercase; color: #08090D; background: #FF6B35; border: 0; border-radius: 0; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), transform 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-btn-block:hover { background: #E8541E; } .ds-btn-block:hover .ds-chev { transform: translateX(4px); } .ds-btn-block:active { transform: translateY(1px) scale(0.99); } .ds-btn-block:focus-visible { outline: 2px solid #FF6B35; outline-offset: 3px; } .ds-chev { width: 0.9em; height: 0.9em; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: square; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined square button (the intro Skip) that turns ember on hover.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Skip intro</button>",
+      "css": ".ds-btn-ghost { font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #F3F4F6; background: transparent; border: 1px solid rgba(243,244,246,0.35); border-radius: 0; padding: 10px 16px; cursor: pointer; transition: border-color 0.2s, color 0.2s; } .ds-btn-ghost:hover { border-color: #FF6B35; color: #FF6B35; } .ds-btn-ghost:focus-visible { outline: 2px solid #FF6B35; outline-offset: 3px; }"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Square checkbox chip in the booking form; selected fills ember.",
+      "html": "<label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Web app</span></label> <label class=\"ds-chip\"><input type=\"checkbox\"><span>Mobile app</span></label>",
+      "css": ".ds-chip { position: relative; display: inline-block; cursor: pointer; } .ds-chip input { position: absolute; inset: 0; opacity: 0; cursor: pointer; } .ds-chip span { display: inline-block; padding: 10px 14px; border: 1.5px solid rgba(243,244,246,0.24); border-radius: 0; font-family: var(--body, Manrope, sans-serif); font-weight: 600; font-size: 15px; color: #F3F4F6; transition: background-color 0.2s, border-color 0.2s, color 0.2s; } .ds-chip:hover span { border-color: #FF6B35; } .ds-chip input:checked + span { background: #FF6B35; border-color: #FF6B35; color: #08090D; } .ds-chip input:focus-visible + span { outline: 2px solid #FF6B35; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square field on Ground with an uppercase label; focus turns the border ember.",
+      "html": "<label class=\"ds-field\"><span>Your name</span><input type=\"text\" placeholder=\"Name\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; } .ds-field > span { font-family: var(--display, 'Chakra Petch', sans-serif); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9B0BC; } .ds-field input { width: 100%; font: 500 18px/1.4 var(--body, Manrope, sans-serif); color: #F3F4F6; background: #08090D; border: 1.5px solid rgba(243,244,246,0.24); border-radius: 0; padding: 13px 14px; caret-color: #FF6B35; transition: border-color 0.2s, background-color 0.2s; } .ds-field input:hover { border-color: #A9B0BC; } .ds-field input:focus { outline: none; border-color: #FF6B35; background: #050608; } .ds-field input:user-invalid { border-color: #FF8A8A; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Sticky blurred bar: Mist uppercase links with a growing ember underline, ember CTA last.",
+      "html": "<nav class=\"ds-nav\"><strong class=\"ds-nav-logo\">edgevyn</strong><div class=\"ds-nav-menu\"><a href=\"#\">About</a><a href=\"#\">Services</a><a href=\"#\">Work</a></div><a class=\"ds-nav-cta\" href=\"#\">Book a call</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 28px; height: 72px; padding: 0 clamp(16px, 4vw, 72px); background: rgba(8,9,13,0.82); backdrop-filter: blur(14px) saturate(1.3); border-bottom: 1px solid rgba(243,244,246,0.11); color: #F3F4F6; } .ds-nav-logo { font-family: var(--body, Manrope, sans-serif); font-size: 22px; } .ds-nav-menu { margin-left: auto; display: flex; gap: 6px; } .ds-nav-menu a { position: relative; padding: 8px 12px; font-family: var(--display, 'Chakra Petch', sans-serif); font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: #A9B0BC; transition: color 0.2s; } .ds-nav-menu a::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; background: #FF6B35; transform: scaleX(0); transform-origin: 0 50%; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-nav-menu a:hover { color: #F3F4F6; } .ds-nav-menu a:hover::after { transform: scaleX(1); } .ds-nav-menu a:focus-visible { outline: 2px solid #FF6B35; outline-offset: 3px; } .ds-nav-cta { padding: 12px 18px; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: #08090D; background: #FF6B35; transition: background-color 0.25s; } .ds-nav-cta:hover { background: #E8541E; }"
+    },
+    {
+      "name": "Rim-Lit Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Graphite fact or step panel edged by the two-light rim; lifts on hover.",
+      "html": "<div class=\"ds-panel\"><span class=\"ds-panel-num\">01</span><h3>Understand</h3><p>We start with the business problem, not the stack.</p><span class=\"ds-panel-out\">Out: a clear problem</span></div>",
+      "css": ".ds-panel { display: flex; flex-direction: column; gap: 12px; max-width: 320px; padding: 30px 26px 28px; color: #F3F4F6; border: 1px solid transparent; border-radius: 0; background: linear-gradient(#11141B, #11141B) padding-box, linear-gradient(135deg, #3B7AD9, rgba(243,244,246,0.08) 38%, rgba(243,244,246,0.08) 62%, #FF6B35) border-box; transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); } .ds-panel:hover { transform: translateY(-8px); } .ds-panel-num { font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 72px; line-height: 0.9; color: transparent; -webkit-text-stroke: 1.5px #FF6B35; } .ds-panel h3 { margin: 8px 0 0; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 28px; line-height: 1.02; text-transform: uppercase; letter-spacing: -0.01em; } .ds-panel p { margin: 0; font-family: var(--body, Manrope, sans-serif); font-size: 16px; color: #A9B0BC; } .ds-panel-out { margin-top: auto; padding-top: 18px; font-family: var(--display, 'Chakra Petch', sans-serif); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #8DB4F0; }"
+    },
+    {
+      "name": "Product Window",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Signature floating window: title bar with dots and URL over a screenshot, rim-lit, on the deep drop.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-win\" href=\"#\"><span class=\"ds-win-bar\"><i></i><i></i><i></i><span>lms.gradusmind.com</span></span><span class=\"ds-win-shot\"></span></a></div>",
+      "css": ".ds-stage { perspective: 1800px; padding: 32px; } .ds-win { display: block; width: 320px; text-decoration: none; border: 1px solid transparent; background: linear-gradient(#11141B, #11141B) padding-box, linear-gradient(135deg, #3B7AD9, rgba(243,244,246,0.08) 38%, rgba(243,244,246,0.08) 62%, #FF6B35) border-box; box-shadow: 0 40px 80px -30px rgba(0,0,0,0.85), 0 2px 0 rgba(0,0,0,0.5); transform: rotateX(8deg) rotateY(-16deg); transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); } .ds-win:hover { transform: rotateX(8deg) rotateY(-16deg) translateZ(40px); } .ds-win:focus-visible { outline: 2px solid #FF6B35; outline-offset: 3px; } .ds-win-bar { display: flex; align-items: center; gap: 6px; padding: 8px 10px; background: #050608; border-bottom: 1px solid rgba(243,244,246,0.11); } .ds-win-bar i { width: 8px; height: 8px; border-radius: 50%; background: rgba(243,244,246,0.25); } .ds-win-bar i:first-child { background: #FF6B35; } .ds-win-bar span { margin-left: 8px; font-family: var(--display, 'Chakra Petch', sans-serif); font-size: 13px; color: #A9B0BC; } .ds-win-shot { display: block; aspect-ratio: 1200 / 692; background: linear-gradient(180deg, #181C25, #11141B); }"
+    },
+    {
+      "name": "Work Card",
+      "kind": "card",
+      "refersTo": "work-card",
+      "description": "Ground plate with an ember top edge, set inside a tilting work panel.",
+      "html": "<div class=\"ds-work-card\"><h3>Cafe Studio</h3><p>Plan a cafe, count the seats, then walk through it in 3D.</p><a class=\"ds-work-link\" href=\"#\">Open the demo</a><span class=\"ds-work-index\">Food and hospitality</span></div>",
+      "css": ".ds-work-card { display: flex; flex-direction: column; gap: 10px; max-width: 420px; padding: 24px 26px 22px; background: #08090D; border-top: 3px solid #FF6B35; color: #F3F4F6; } .ds-work-card h3 { margin: 0; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: -0.01em; } .ds-work-card p { margin: 0; font-family: var(--body, Manrope, sans-serif); font-size: 16px; line-height: 1.5; color: #A9B0BC; } .ds-work-link { align-self: flex-start; display: inline-flex; gap: 8px; margin-top: 6px; padding: 8px 0 6px; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: #FF6B35; border-bottom: 2px solid #FF6B35; transition: gap 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-work-link:hover { gap: 14px; } .ds-work-link:focus-visible { outline: 2px solid #FF6B35; outline-offset: 3px; } .ds-work-index { padding-top: 12px; border-top: 1px solid rgba(243,244,246,0.11); font-family: var(--display, 'Chakra Petch', sans-serif); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9B0BC; }"
+    },
+    {
+      "name": "Statement Band",
+      "kind": "custom",
+      "refersTo": "statement-band",
+      "description": "Full-bleed ember band; old-tool lines are struck through, the turn line stands.",
+      "html": "<div class=\"ds-band\"><span class=\"ds-band-old\">Registers.</span><span class=\"ds-band-old\">Spreadsheets.</span><span class=\"ds-band-turn\">One system that runs.</span></div>",
+      "css": ".ds-band { display: grid; padding: 48px 32px; background: #FF6B35; color: #08090D; font-family: var(--display, 'Chakra Petch', sans-serif); font-weight: 700; font-size: 44px; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.01em; } .ds-band-old { position: relative; justify-self: start; color: rgba(8,9,13,0.78); } .ds-band-old::after { content: ''; position: absolute; left: -0.04em; right: -0.04em; top: 50%; height: 0.07em; background: #08090D; transform-origin: 0 50%; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); } .ds-band:hover .ds-band-old::after { transform: scaleX(0); } .ds-band-turn { margin-top: 0.3em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ember & Cobalt",
+    "overview": "The site is a dark room lit by two lights. A near-black ground holds graphite panels; ember orange is the warm key light and the only colour an action is ever filled with; the logo's cobalt is the cool second light that draws lines, rims and the low end of the hero's point field. Depth is the material: real product windows float at three distances in CSS 3D, tilt toward the pointer and recede as the page scrolls, work panels tilt with a white glare, and every raised panel is edged by a one-pixel rim that runs from cobalt in one corner to ember in the other.\n\nType is squared and loud. Chakra Petch in uppercase carries every heading at poster scale with tight leading (0.88 to 0.92); Manrope carries reading text at a generous 18px. Words that matter sit on ember highlighter bars rather than changing colour. Layout runs edge to edge: there is no max-width container, only a fluid gutter, so the hero and every section share one left edge at any width.\n\nMotion moves things through space, not in and out of visibility. Sections arrive by rising and untilting; a statement band crosses out the old tools line by line as it scrolls; a ring of stack names turns and lights the matching row of the list beside it. Smooth scroll ties it together. Under reduced motion all of it stops, and the page reads complete and still.",
+    "keyCharacteristics": [
+      "Near-black ground, graphite panels, ember as the single action fill with dark text on it.",
+      "Cobalt as the cool counter-light: rims, progress lines, the point field, secondary labels.",
+      "Uppercase Chakra Petch display at poster scale; Manrope 18px body with tabular numerals.",
+      "Square corners everywhere; depth from perspective, rim light and one deep black drop shadow.",
+      "Full-bleed sections with a clamp gutter; no centred max-width column.",
+      "Motion is position, tilt and depth; reduced motion freezes everything into a complete static page."
+    ],
+    "rules": [
+      { "name": "The One Fill Rule", "body": "Ember is the only colour a clickable thing is filled with, and its text is always On-Ember. Cobalt never fills a control.", "section": "colors" },
+      { "name": "The Two Lights Rule", "body": "Colour light enters only through the rim, the point field and lines: cobalt from one side, ember from the other. There are no coloured blurred glows, no gradient text and no glass cards.", "section": "colors" },
+      { "name": "The Uppercase Display Rule", "body": "Every Chakra Petch heading is uppercase, 700, letter-spacing -0.01em, line-height under 1.05. The statement paragraph is the one sentence-case display use.", "section": "typography" },
+      { "name": "The Highlighter Rule", "body": "Emphasis inside display type is an ember bar behind the word (On-Ember text, bar at 0.84em height), wiped in from the left. Never a colour change or gradient on the letters.", "section": "typography" },
+      { "name": "The Two-Light Rim Rule", "body": "Raised panels (product windows, work panels, facts, steps) take a 1px transparent border filled by a border-box gradient at an angle: cobalt, faint bone (8%) from 38% to 62%, then ember. On work panels the angle turns so the cobalt corner faces the pointer. This rim is the only coloured light on a panel.", "section": "elevation" },
+      { "name": "The Recede Rule", "body": "The hero's window stack tilts toward the pointer at rest and, as the hero scrolls out, pulls back up to 280px in depth and turns away. Depth answers the visitor; it never loops on its own.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do fill every action with Ember (#FF6B35) and set its text in On-Ember (#08090D); hover to Ember Deep (#E8541E).",
+      "Do edge raised panels with the two-light rim: 1px transparent border, border-box gradient cobalt, faint bone at 38 to 62%, ember.",
+      "Do set headings in uppercase Chakra Petch 700 at -0.01em with line-height 0.88 to 1.05, and emphasise words with the ember highlighter bar.",
+      "Do keep corners square (0px) on every control and panel.",
+      "Do run sections full bleed inside the clamp(16px, 4vw, 72px) gutter so all content shares one left edge.",
+      "Do bring sections in by position and tilt (rise about 70px, untilt from -18 degrees, expo-out over 1.1s) with content fully visible from the first frame.",
+      "Do pause continuous effects (wave field, stack ring) when offscreen, and make every effect static under reduced motion.",
+      "Do size hero type and the hero CTA by min(vw, vh) so the action stays in the first viewport on short wide screens."
+    ],
+    "donts": [
+      "Don't fill controls with cobalt or put white text on ember.",
+      "Don't add coloured blurred glows, gradient text or glassmorphism cards; colour light comes only from the rim, the field and lines.",
+      "Don't add kickers or eyebrow labels above headings.",
+      "Don't number sections; the 01 to 04 process numerals are the only numbering.",
+      "Don't use side-stripe accents on cards or rounded corners anywhere.",
+      "Don't use any shadow other than the black Deep Drop, and only for objects floating in depth.",
+      "Don't use Intro Navy (#000631) outside the intro film overlay."
+    ]
+  }
+}

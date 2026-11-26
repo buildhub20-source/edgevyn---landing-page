@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edgevyn: software that runs your business</title>
+  <meta name="description" content="Edgevyn is a software company. We build web apps, ERP, CRM and LMS platforms, online stores, AI solutions and mobile apps, from early-stage MVPs to enterprise-grade systems.">
+  <meta name="theme-color" content="#08090D">
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/chakra-petch-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Intro plays once per browser session; skipped for reduced motion or ?intro=0 */
+    (function () {
+      var d = document.documentElement, show = true;
+      try {
+        show = !sessionStorage.getItem("ev-intro") &&
+               !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+               !/[?&]intro=0/.test(location.search);
+      } catch (e) {}
+      if (show) d.classList.add("intro-on");
+    })();
+  </script></head>
+<body>
+  <div class="intro" data-intro>
+    <div class="intro-frame" aria-hidden="true">
+      <video class="intro-video" src="assets/video/intro.mp4" muted playsinline preload="auto"></video>
+      <span class="intro-patch"></span>
+    </div>
+    <span class="intro-bar" aria-hidden="true"><i data-intro-bar></i></span>
+    <button class="intro-skip" type="button" data-intro-skip>Skip intro</button>
+  </div>  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav-logo" href="#top" aria-label="Edgevyn, back to top">
+      <img src="assets/brand/edgevyn-logo.png" width="656" height="142" alt="Edgevyn">
+    </a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> Book a call</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title" class="hero-title">
+          <span class="line"><span>We build</span></span>
+          <span class="line"><span>software</span></span>
+          <span class="line"><span><mark>that runs</mark></span></span>
+          <span class="line"><span><mark>your</mark> business.</span></span>
+        </h1>
+        <p class="hero-lede">Web apps, ERP and LMS platforms, online stores, AI tools and mobile apps, engineered for scale and security. From a first MVP to a large enterprise system.</p>
+        <div class="hero-action">
+          <a class="block-cta" href="#contact"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> Book a call</a>
+          <p class="hero-note">First step: a short call about the problem you want solved.</p>
+        </div>
+      </div>
+      <div class="hero-stage" data-hero-stage>
+        <div class="stack3d" data-stack3d>
+          <a class="win3d win-a" href="https://gradusmind.com" target="_blank" rel="noopener" data-depth="70">
+            <span class="win3d-bar"><i></i><i></i><i></i><span>gradusmind.com</span></span>
+            <img class="screen" src="assets/shots/lms.jpg" width="1200" height="692" alt="Gradus Mind LMS, our learning platform, live at gradusmind.com.">
+          </a>
+          <a class="win3d win-b" href="https://cafestudiogm.netlify.app" target="_blank" rel="noopener" data-depth="140">
+            <span class="win3d-bar"><i></i><i></i><i></i><span>cafestudiogm.netlify.app</span></span>
+            <img class="screen" src="assets/shots/cafe.jpg" width="1200" height="692" alt="Cafe Studio, our cafe planning app, with a live floor plan.">
+          </a>
+          <a class="win3d win-c" href="https://vastra-boutique-demo-a4f40325.netlify.app" target="_blank" rel="noopener" data-depth="210">
+            <span class="win3d-bar"><i></i><i></i><i></i><span>vastra-boutique-demo-a4f40325.netlify.app</span></span>
+            <img class="screen" src="assets/shots/vastra.jpg" width="1200" height="692" alt="Vastra Boutique, a phone-first online store we built.">
+          </a>
+        </div>
+        <a class="media-card" href="#work">
+          <span class="media-card-title">Five products, running today</span>
+          <span class="media-card-text">An LMS, a school ERP, a cafe planner and two online stores, built and run by us.</span>
+          <svg class="media-card-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+        </a>
+      </div>
+      <canvas class="hero-field" data-hero-field aria-hidden="true"></canvas>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 id="about-title" class="sr-only">Who we are</h2>
+        <p class="statement" data-reveal-words>Edgevyn is a software company. We build scalable, secure, high-performance software for any business, from early-stage MVPs to large enterprise systems. We start with the business problem, choose the right technology, engineer for scale and security, and stay on so the software stays maintainable as you grow.</p>
+        <dl class="facts">
+          <div class="fact">
+            <dt>End to end</dt>
+            <dd>From the first conversation to long-term maintenance: design, build, testing, launch and support.</dd>
+          </div>
+          <div class="fact">
+            <dt>We run our own products</dt>
+            <dd>An LMS, a school ERP and three commerce and planning apps are live today. We build for clients the way we build for ourselves.</dd>
+          </div>
+          <div class="fact">
+            <dt>Built for how India works</dt>
+            <dd>English and Tamil, UPI and cash on delivery, WhatsApp and SMS alerts, same-day local delivery rules: built in, not bolted on.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-top">
+          <h2 id="services-title" class="display">What we build</h2>
+          <p class="section-sub">Nine practices, one team. Pick the one closest to your problem.</p>
+        </div>
+        <div class="acc" data-accordion>
+          <div class="acc-item is-open">
+            <h3><button class="acc-head" aria-expanded="true" aria-controls="s1" id="s1h"><span class="acc-name">Web and full-stack</span><span class="acc-short">Custom web apps and admin dashboards</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s1" role="region" aria-labelledby="s1h">
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>Custom web apps and admin dashboards with React, Next.js and Vue.js on the front, Java Spring Boot, Node.js and .NET behind them, and REST APIs and third-party integrations in between.</p>
+                  <ul class="tags"><li>React</li><li>Next.js</li><li>Vue.js</li><li>Spring Boot</li><li>Node.js</li><li>.NET</li></ul>
+                </div>
+                <img class="screen" src="assets/shots/cafe.jpg" width="1200" height="692" loading="lazy" alt="Cafe Studio, a web app we built: a cafe floor plan with live seat and cost numbers.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s2" id="s2h"><span class="acc-name">Enterprise software</span><span class="acc-short">ERP, CRM and LMS solutions</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s2" role="region" aria-labelledby="s2h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>ERP, CRM and LMS solutions, multi-tenant SaaS, business process automation, system integrations and legacy modernization, so one system replaces the registers and spreadsheets.</p>
+                  <ul class="tags"><li>ERP</li><li>CRM</li><li>LMS</li><li>Multi-tenant SaaS</li><li>Automation</li></ul>
+                </div>
+                <img class="screen" src="assets/shots/erp-app.jpg" width="1200" height="692" loading="lazy" alt="School ERP inventory and procurement dashboard: vendors, open requests, stock value, reorder alerts and the purchase pipeline.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s3" id="s3h"><span class="acc-name">E-commerce and websites</span><span class="acc-short">Online stores and business websites</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s3" role="region" aria-labelledby="s3h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>Online stores built for smooth buying and growth, and modern, responsive business websites that work on the phone first.</p>
+                  <ul class="tags"><li>Storefronts</li><li>UPI and COD</li><li>Order tracking</li><li>Business sites</li></ul>
+                </div>
+                <img class="photo" src="assets/photos/photo-f86486063-960.jpg" width="960" height="637" loading="lazy" alt="Shelves of folded silk sarees in a shop.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s4" id="s4h"><span class="acc-name">AI and automation</span><span class="acc-short">LLM apps, RAG, chatbots and agents</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s4" role="region" aria-labelledby="s4h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>LLM-powered apps, RAG systems, chatbots and virtual assistants, AI agents and multi-agent workflows, and automated document processing. AI that assists; people stay in control of the decisions.</p>
+                  <ul class="tags"><li>LLM apps</li><li>RAG</li><li>Chatbots</li><li>AI agents</li><li>Document processing</li></ul>
+                </div>
+                <img class="screen" src="assets/shots/lms-app.jpg" width="1200" height="692" loading="lazy" alt="Gradus Mind LMS admin dashboard: learning health, completion, active learners and a leaderboard of category champions.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s5" id="s5h"><span class="acc-name">Mobile apps</span><span class="acc-short">Android, iOS and cross-platform</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s5" role="region" aria-labelledby="s5h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>Android, iOS and cross-platform apps with their backends and APIs, including installable web apps that need no app-store download.</p>
+                  <ul class="tags"><li>Android</li><li>iOS</li><li>Cross-platform</li><li>PWA</li></ul>
+                </div>
+                <img class="screen" src="assets/shots/vastra.jpg" width="1200" height="692" loading="lazy" alt="Vastra Boutique, a phone-first online store we built.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s6" id="s6h"><span class="acc-name">Backend and distributed systems</span><span class="acc-short">Microservices and high-performance APIs</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s6" role="region" aria-labelledby="s6h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>Microservices, high-performance APIs, event-driven and multithreaded processing, caching, authentication and role-based access.</p>
+                  <ul class="tags"><li>Microservices</li><li>Event-driven</li><li>Caching</li><li>Auth and roles</li></ul>
+                </div>
+                <img class="photo" src="assets/photos/photo-f61684334-960.jpg" width="960" height="695" loading="lazy" alt="Hands on a laptop keyboard with code on the screen.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s7" id="s7h"><span class="acc-name">Cloud, DevOps and data</span><span class="acc-short">AWS, Azure, CI/CD and databases</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s7" role="region" aria-labelledby="s7h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>AWS and Azure, CI/CD, Docker, monitoring and observability; PostgreSQL, MySQL, SQL Server, MongoDB and Redis; data migration and analytics pipelines.</p>
+                  <ul class="tags"><li>AWS</li><li>Azure</li><li>Docker</li><li>CI/CD</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li></ul>
+                </div>
+                <img class="photo" src="assets/photos/photo-f44808038-960.jpg" width="960" height="640" loading="lazy" alt="Rows of server racks in a data centre.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s8" id="s8h"><span class="acc-name">UI/UX and product design</span><span class="acc-short">Prototypes and design systems</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s8" role="region" aria-labelledby="s8h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>Prototyping, design systems and accessible, user-centred interfaces, designed with the people who will use them every day.</p>
+                  <ul class="tags"><li>Prototyping</li><li>Design systems</li><li>Accessibility</li></ul>
+                </div>
+                <img class="screen" src="assets/shots/patisserie.jpg" width="1200" height="692" loading="lazy" alt="The Patisserie, an online cake shop we designed and built.">
+              </div>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-head" aria-expanded="false" aria-controls="s9" id="s9h"><span class="acc-name">Quality, security and support</span><span class="acc-short">Testing, security and long-term teams</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="s9" role="region" aria-labelledby="s9h" hidden>
+              <div class="acc-inner">
+                <div class="acc-text">
+                  <p>Automated unit, integration and end-to-end testing, secure architecture, performance and load testing, then maintenance, new features and dedicated long-term teams.</p>
+                  <ul class="tags"><li>Automated tests</li><li>Load testing</li><li>Secure architecture</li><li>Maintenance</li></ul>
+                </div>
+                <img class="photo" src="assets/photos/photo-f61684334-500.jpg" width="500" height="362" loading="lazy" alt="Hands on a laptop keyboard with code on the screen.">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement band -->
+    <section class="band" aria-label="What we replace">
+      <p class="band-text">
+        <span class="line"><span>Registers.</span></span>
+        <span class="line"><span>Spreadsheets.</span></span>
+        <span class="line"><span>WhatsApp threads.</span></span>
+        <span class="line band-turn"><span>We turn them into one system that runs.</span></span>
+      </p>
+    </section>
+
+    <!-- Work -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-top">
+          <h2 id="work-title" class="display">Our work, live</h2>
+          <p class="section-sub">Five products we built and run ourselves. Open any of them; the shop fronts and Cafe Studio need no login.</p>
+        </div>
+      </div>
+      <div class="work-grid">
+        <article data-tilt class="work-item work-wide">
+          <a class="work-media" href="https://gradusmind.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="screen" src="assets/shots/lms-app.jpg" width="1200" height="692" loading="lazy" alt=""></a>
+          <span class="glare" aria-hidden="true"></span>
+          <div class="work-card">
+            <span class="work-index">Education</span>
+            <h3>Gradus Mind LMS</h3>
+            <p>One learning platform for colleges, institutes and corporate academies: courses, live classes, coding tests and certificates employers can verify.</p>
+            <a class="work-link" href="https://gradusmind.com" target="_blank" rel="noopener">Open gradusmind.com <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+          </div>
+        </article>
+        <article data-tilt class="work-item">
+          <a class="work-media" href="https://schoolerpmanagement.netlify.app/login" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="screen" src="assets/shots/erp-app.jpg" width="1200" height="692" loading="lazy" alt=""></a>
+          <span class="glare" aria-hidden="true"></span>
+          <div class="work-card">
+            <span class="work-index">Schools</span>
+            <h3>School ERP</h3>
+            <p>Fees, attendance, transport, stock and purchasing from one system, with reorder alerts and parent and driver apps in English and Tamil.</p>
+            <a class="work-link" href="https://schoolerpmanagement.netlify.app/login" target="_blank" rel="noopener">Open the demo <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+          </div>
+        </article>
+        <article data-tilt class="work-item">
+          <a class="work-media" href="https://cafestudiogm.netlify.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/shots/cafe.jpg" width="1200" height="692" loading="lazy" alt=""></a>
+          <span class="glare" aria-hidden="true"></span>
+          <div class="work-card">
+            <span class="work-index">Food and hospitality</span>
+            <h3>Cafe Studio</h3>
+            <p>Plan a cafe before you build it: place real fittings, watch seats and cost update live, then walk through it in 3D.</p>
+            <a class="work-link" href="https://cafestudiogm.netlify.app" target="_blank" rel="noopener">Open Cafe Studio <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+          </div>
+        </article>
+        <article data-tilt class="work-item">
+          <a class="work-media" href="https://vastra-boutique-demo-a4f40325.netlify.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/shots/vastra.jpg" width="1200" height="692" loading="lazy" alt=""></a>
+          <span class="glare" aria-hidden="true"></span>
+          <div class="work-card">
+            <span class="work-index">Retail</span>
+            <h3>Vastra Boutique</h3>
+            <p>A phone-first store for boutiques and saree shops, with UPI and COD, size alerts, store-visit booking and same-day local delivery.</p>
+            <a class="work-link" href="https://vastra-boutique-demo-a4f40325.netlify.app" target="_blank" rel="noopener">Open the store <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+          </div>
+        </article>
+        <article data-tilt class="work-item">
+          <a class="work-media" href="https://the-patisserie-karur-erode.netlify.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/shots/patisserie.jpg" width="1200" height="692" loading="lazy" alt=""></a>
+          <span class="glare" aria-hidden="true"></span>
+          <div class="work-card">
+            <span class="work-index">Bakeries</span>
+            <h3>The Patisserie</h3>
+            <p>An online cake shop with two kitchens on one site, eggless options, a 3D cake designer and wedding enquiries.</p>
+            <a class="work-link" href="https://the-patisserie-karur-erode.netlify.app" target="_blank" rel="noopener">Open the shop <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section-top">
+          <h2 id="process-title" class="display">How a build runs</h2>
+          <p class="section-sub">The same four steps whether it is a first MVP or an enterprise system.</p>
+        </div>
+        <ol class="steps" data-steps>
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Understand</h3>
+            <p>We learn how the work runs today, on paper, in spreadsheets or in chat groups, before we write any code.</p>
+            <span class="step-out">Out: a clear problem</span>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Choose</h3>
+            <p>The right technology for the job: the frontend, backend, database and cloud that fit your scale and budget.</p>
+            <span class="step-out">Out: the plan and stack</span>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Engineer</h3>
+            <p>Built for scale and security: role-based access, audit trails, automated tests from unit to end-to-end, and load testing.</p>
+            <span class="step-out">Out: tested software</span>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <h3>Deliver and support</h3>
+            <p>Launched and kept maintainable as you grow, with maintenance, new features and a dedicated long-term team when you need one.</p>
+            <span class="step-out">Out: a system that runs</span>
+          </li>
+        </ol>
+        <div class="steps-line" aria-hidden="true"><span data-steps-fill></span></div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="stack" aria-labelledby="stack-title">
+      <div class="wrap stack-wrap">
+        <div class="stack-head"><h2 id="stack-title" class="display">What we build with</h2></div>
+        <dl class="stack-list">
+          <div data-row="front"><dt>Frontend</dt><dd>React · Next.js · Vue.js</dd></div>
+          <div data-row="back"><dt>Backend</dt><dd>Java Spring Boot · Node.js · .NET</dd></div>
+          <div data-row="data"><dt>Data</dt><dd>PostgreSQL · MySQL · SQL Server · MongoDB · Redis</dd></div>
+          <div data-row="cloud"><dt>Cloud</dt><dd>AWS · Azure · Docker · CI/CD</dd></div>
+          <div><dt>Mobile</dt><dd>Android · iOS · Cross-platform · PWA</dd></div>
+          <div><dt>AI</dt><dd>LLMs · RAG · Chatbots · Agents</dd></div>
+        </dl>
+      </div>
+      <div class="ring-scene" aria-hidden="true"><div class="ring" data-ring style="--n:12"><span style="--i:0" data-row="front">React</span><span style="--i:1" data-row="front">Next.js</span><span style="--i:2" data-row="front">Vue.js</span><span style="--i:3" data-row="back">Spring Boot</span><span style="--i:4" data-row="back">Node.js</span><span style="--i:5" data-row="back">.NET</span><span style="--i:6" data-row="data">PostgreSQL</span><span style="--i:7" data-row="data">MongoDB</span><span style="--i:8" data-row="data">Redis</span><span style="--i:9" data-row="cloud">AWS</span><span style="--i:10" data-row="cloud">Azure</span><span style="--i:11" data-row="cloud">Docker</span></div></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-wrap">
+        <div class="contact-intro">
+          <h2 id="contact-title" class="display display-xl">Let's build <mark>yours.</mark></h2>
+          <p>Tell us what you need built, or which of our products you'd like to see. We'll call you to set up a time.</p>
+          <p class="contact-mail">Prefer email? Write to <a href="mailto:buildhub20@gmail.com">buildhub20@gmail.com</a></p>
+        </div>
+        <form class="contact-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="company-url" novalidate data-booking>
+          <input type="hidden" name="form-name" value="booking">
+          <p class="hp"><label>Leave empty <input name="company-url" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-grid">
+            <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
+            <label class="field"><span>Business or institute</span><input name="organisation" autocomplete="organization" required></label>
+            <label class="field"><span>Phone</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9+\s\-]{8,16}"></label>
+            <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"></label>
+          </div>
+          <fieldset class="needs">
+            <legend>What do you need?</legend>
+            <label class="chip"><input type="checkbox" name="interest" value="A custom build"><span>A custom build</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="Gradus Mind LMS"><span>Gradus Mind LMS</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="School ERP"><span>School ERP</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="Cafe Studio"><span>Cafe Studio</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="Vastra Boutique"><span>Vastra Boutique</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="The Patisserie"><span>The Patisserie</span></label>
+          </fieldset>
+          <label class="field field-area"><span>Anything we should know? <em>(optional)</em></span><textarea name="message" rows="3"></textarea></label>
+          <button class="block-cta" type="submit"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg> <span data-label>Book a call</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-grid">
+      <a class="foot-logo" href="#top" aria-label="Edgevyn, back to top"><img src="assets/brand/edgevyn-logo.png" width="656" height="142" alt="Edgevyn"></a>
+      <p class="foot-line">Scalable, secure software for any business, from MVP to enterprise.<a class="foot-mail" href="mailto:buildhub20@gmail.com">buildhub20@gmail.com</a></p>
+      <nav class="foot-col" aria-label="Footer">
+        <p class="foot-head">Company</p>
+        <a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a><a href="#contact">Book a call</a>
+      </nav>
+      <nav class="foot-col" aria-label="Live products">
+        <p class="foot-head">Live products</p>
+        <a href="https://gradusmind.com" target="_blank" rel="noopener">Gradus Mind LMS</a>
+        <a href="https://schoolerpmanagement.netlify.app/login" target="_blank" rel="noopener">School ERP</a>
+        <a href="https://cafestudiogm.netlify.app" target="_blank" rel="noopener">Cafe Studio</a>
+        <a href="https://vastra-boutique-demo-a4f40325.netlify.app" target="_blank" rel="noopener">Vastra Boutique</a>
+        <a href="https://the-patisserie-karur-erode.netlify.app" target="_blank" rel="noopener">The Patisserie</a>
+      </nav>
+      <p class="foot-small">&copy; <span data-year>2026</span> Edgevyn. Photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg" target="_blank" rel="noopener">Carl Lender</a> (CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Shelves_from_a_Saree_shop_(6543977625).jpg" target="_blank" rel="noopener">screaming_monkey</a> (CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Programmer_at_work_(Unsplash).jpg" target="_blank" rel="noopener">Crew</a> (CC0).</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.min.js" defer></script>
+  <script src="field.js" defer></script>
+</body>
+</html>

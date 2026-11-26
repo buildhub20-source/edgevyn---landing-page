@@ -1,0 +1,22 @@
+# Impeccable working material (screenshots, raw captures, candidate photos, decision pages).
+# The design records that matter are kept: config.json, design.json and surfaces/.
+.impeccable/*
+!.impeccable/config.json
+!.impeccable/design.json
+!.impeccable/surfaces/
+.impeccable/config.local.json
+
+# Assets the page no longer uses (kept locally, not shipped)
+assets/photos/photo-f30343877*
+assets/photos/photo-f44808038-500.jpg
+assets/photos/photo-f61684334.jpg
+assets/photos/photo-f86486063-500.jpg
+assets/shots/erp.jpg
+
+# Local tooling and OS files
+.playwright-mcp/
+.claude/
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
