@@ -3,6 +3,12 @@
 
   const root = document.documentElement;
   document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
+  const themeVar = (name) => getComputedStyle(root).getPropertyValue(name).trim();
+
+  // nav logo follows the theme: navy wordmark on light grounds, white wordmark on dark ones
+  const navLogo = document.querySelector(".nav-logo img");
+  const logoUrl = themeVar("--logo-on-ground").replace(/^url\(["']?|["']?\)$/g, "");
+  if (navLogo && logoUrl) navLogo.src = logoUrl;
 
   // ---- Intro film: plays while the page loads, then lifts away (once per session) ----
   // Ends when the film has played AND the page has loaded, on Skip, or after a safety cap.
@@ -235,7 +241,7 @@
   // ---- Hero entrance: lines rise, bars wipe, windows fly in from depth (after the intro lifts) ----
   introDone.then(() => {
     gsap.from(".hero-title .line > span", { yPercent: 105, duration: 1.1, ease: "expo.out", stagger: 0.08 });
-    gsap.fromTo(".hero-title mark", { backgroundSize: "0% 0.84em", color: "#F3F4F6" }, { backgroundSize: "100% 0.84em", color: "#08090D", duration: 0.8, ease: "expo.out", delay: 0.55, stagger: 0.14 });
+    gsap.fromTo(".hero-title mark", { backgroundSize: "0% 0.84em", color: themeVar("--text") }, { backgroundSize: "100% 0.84em", color: themeVar("--on-accent"), duration: 0.8, ease: "expo.out", delay: 0.55, stagger: 0.14 });
     gsap.from(".hero-lede", { y: 18, opacity: 0, duration: 0.9, ease: "expo.out", delay: 0.3 });
     gsap.from(".win3d", { z: -700, opacity: 0, rotateY: 25, duration: 1.5, ease: "expo.out", delay: 0.2, stagger: 0.14, clearProps: "transform,opacity" });
     gsap.from(".media-card", { y: 60, opacity: 0, duration: 1, ease: "expo.out", delay: 0.8, clearProps: "transform,opacity" });
@@ -289,5 +295,5 @@
   if (fill) gsap.fromTo(fill, { scaleX: 0 }, { scaleX: 1, ease: "none", scrollTrigger: { trigger: "[data-steps]", start: "top 75%", end: "bottom 55%", scrub: 0.5 } });
 
   // ---- Contact: the bar wipes under "yours." ----
-  gsap.fromTo(".contact .display mark", { backgroundSize: "0% 0.84em", color: "#F3F4F6" }, { backgroundSize: "100% 0.84em", color: "#08090D", duration: 0.8, ease: "expo.out", scrollTrigger: { trigger: ".contact", start: "top 65%", toggleActions: "play none none none" } });
+  gsap.fromTo(".contact .display mark", { backgroundSize: "0% 0.84em", color: themeVar("--text") }, { backgroundSize: "100% 0.84em", color: themeVar("--on-accent"), duration: 0.8, ease: "expo.out", scrollTrigger: { trigger: ".contact", start: "top 65%", toggleActions: "play none none none" } });
 })();

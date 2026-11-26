@@ -38,20 +38,23 @@ function start() {
   const geo = new THREE.BufferGeometry();
   geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
 
+  const css = getComputedStyle(document.documentElement);
+  const tone = (name, fallback) => (css.getPropertyValue(name).trim() || fallback);
+  const additive = tone("--field-blend", "normal") === "add"; // glow on dark themes, ink on light ones
   const uniforms = {
     uTime: { value: 0 },
     uMouse: { value: new THREE.Vector2(0, 0) },
     uPull: { value: 0 },
     uPixel: { value: renderer.getPixelRatio() },
-    uCobalt: { value: new THREE.Color("#3B7AD9") },
-    uEmber: { value: new THREE.Color("#FF6B35") }
+    uCobalt: { value: new THREE.Color(tone("--field-a", "#2B5FD9")) },
+    uEmber: { value: new THREE.Color(tone("--field-b", "#FF6B5B")) }
   };
 
   const mat = new THREE.ShaderMaterial({
     uniforms,
     transparent: true,
     depthWrite: false,
-    blending: THREE.AdditiveBlending,
+    blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending,
     vertexShader: /* glsl */ `
       uniform float uTime; uniform vec2 uMouse; uniform float uPull; uniform float uPixel;
       varying float vH; varying float vFade;
@@ -78,7 +81,7 @@ function start() {
         vec2 c = gl_PointCoord - 0.5;
         float a = smoothstep(0.5, 0.15, length(c));
         vec3 col = mix(uCobalt, uEmber, smoothstep(-0.2, 0.75, vH));
-        gl_FragColor = vec4(col, a * vFade);
+        gl_FragColor = vec4(col, a * vFade * 0.85);
       }`
   });
   const points = new THREE.Points(geo, mat);
