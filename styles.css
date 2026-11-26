@@ -499,4 +499,20 @@ img.screen { border: 6px solid var(--surface-2); border-top-width: 20px; backgro
   --deep-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8), 0 2px 0 rgba(0, 0, 0, 0.4);
   --signal-error: #FF9A9A;
   --logo-on-ground: url("assets/brand/edgevyn-logo.png");
+}/* Onyx & Azure: neutral near-black ground, azure actions, ice light */
+[data-theme="onyx"] {
+  --bg: #0A0B0D; --bg-deep: #0E1013; --surface: #14171C; --surface-2: #1C2027;
+  --line: rgba(236, 242, 250, 0.10); --line-strong: rgba(236, 242, 250, 0.22);
+  --text: #F2F5F9; --mist: #A7AFBB;
+  --accent: #4C9BFF; --accent-deep: #2F84F5; --on-accent: #05080D;
+  --second: #A9D4FF; --second-soft: #D6EAFF;
+  --navy: #060708; --on-navy: #F2F5F9; --on-navy-soft: rgba(242, 245, 249, 0.7);
+  --band: #4C9BFF; --on-band: #05080D; --on-band-soft: rgba(5, 8, 13, 0.8); --band-strike: #05080D;
+  --nav-bg: rgba(10, 11, 13, 0.8);
+  --accent-wash: rgba(76, 155, 255, 0.07); --accent-wash-2: rgba(76, 155, 255, 0.13);
+  --rim-mid: rgba(236, 242, 250, 0.07);
+  --field-a: #2F6FE0; --field-b: #BFE0FF; --field-blend: add;
+  --deep-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.85), 0 2px 0 rgba(0, 0, 0, 0.4);
+  --signal-error: #FF9A9A;
+  --logo-on-ground: url("assets/brand/edgevyn-logo.png");
 }
