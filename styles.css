@@ -516,3 +516,111 @@ img.screen { border: 6px solid var(--surface-2); border-top-width: 20px; backgro
   --signal-error: #FF9A9A;
   --logo-on-ground: url("assets/brand/edgevyn-logo.png");
 }
+/* Mono & Mint: adapted from the monodrift template palette (off-white, ink, greys, one mint accent).
+   Mint is a fill only; where the accent is text, a deep green stands in so it reads on white. */
+[data-theme="mint"] {
+  --bg: #FAFAFA; --bg-deep: #F4F4F4; --surface: #FFFFFF; --surface-2: #E6E6E6;
+  --line: rgba(14, 14, 14, 0.10); --line-strong: rgba(14, 14, 14, 0.24);
+  --text: #0E0E0E; --mist: #4D4D4D;
+  --accent: #52FF9D; --accent-deep: #2EEB83; --on-accent: #0E0E0E;
+  --accent-ink: #0B7A43;
+  --second: #1FCB72; --second-soft: #0B7A43;
+  --navy: #0E0E0E; --on-navy: #FAFAFA; --on-navy-soft: rgba(250, 250, 250, 0.7);
+  --band: #0E0E0E; --on-band: #FAFAFA; --on-band-soft: rgba(250, 250, 250, 0.75); --band-strike: #52FF9D;
+  --nav-bg: rgba(250, 250, 250, 0.88);
+  --accent-wash: rgba(82, 255, 157, 0.10); --accent-wash-2: rgba(82, 255, 157, 0.18);
+  --rim-mid: rgba(14, 14, 14, 0.08);
+  --field-a: #262626; --field-b: #1FCB72; --field-blend: normal;
+  --deep-shadow: 0 30px 60px -28px rgba(14, 14, 14, 0.35), 0 2px 0 rgba(14, 14, 14, 0.06);
+  --signal-error: #C62828;
+  --logo-on-ground: url("assets/brand/edgevyn-logo-dark.png");
+}
+[data-theme="mint"] .statement .w.is-edge,
+[data-theme="mint"] .acc-head:hover,
+[data-theme="mint"] .acc-item.is-open .acc-name,
+[data-theme="mint"] .tags li:hover,
+[data-theme="mint"] .ring span:nth-child(3n + 1),
+[data-theme="mint"] .stack-list dt,
+[data-theme="mint"] .contact-mail a,
+[data-theme="mint"] .form-status.is-ok { color: var(--accent-ink); }
+[data-theme="mint"] .work-link { color: var(--accent-ink); border-bottom-color: var(--accent); }
+[data-theme="mint"] .tags li:hover { border-color: var(--accent-ink); }
+/* Candidate palettes for the team's pick (each a proven corporate / SaaS combination) */
+/* A. Royal & Gold: deep royal navy, gold actions (classic corporate premium) */
+[data-theme="royal"] {
+  --bg: #0B1B3F; --bg-deep: #0E2150; --surface: #132A5E; --surface-2: #1B356F;
+  --line: rgba(240, 244, 255, 0.12); --line-strong: rgba(240, 244, 255, 0.24);
+  --text: #F4F6FC; --mist: #B3BDD6;
+  --accent: #F2C14E; --accent-deep: #E0AB2E; --on-accent: #0B1B3F;
+  --second: #7FA7FF; --second-soft: #B9CEFF;
+  --navy: #07122B; --on-navy: #F4F6FC; --on-navy-soft: rgba(244, 246, 252, 0.7);
+  --band: #F2C14E; --on-band: #0B1B3F; --on-band-soft: rgba(11, 27, 63, 0.8); --band-strike: #0B1B3F;
+  --nav-bg: rgba(11, 27, 63, 0.85);
+  --accent-wash: rgba(242, 193, 78, 0.08); --accent-wash-2: rgba(242, 193, 78, 0.14);
+  --rim-mid: rgba(240, 244, 255, 0.08);
+  --field-a: #3D6BE0; --field-b: #F2C14E; --field-blend: add;
+  --deep-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.7), 0 2px 0 rgba(0, 0, 0, 0.3);
+  --signal-error: #FF9A9A;
+  --logo-on-ground: url("assets/brand/edgevyn-logo.png");
+}
+/* B. Indigo SaaS: clean white, indigo actions, cyan light (modern product-company look) */
+[data-theme="indigo"] {
+  --bg: #F7F8FF; --bg-deep: #EEF0FD; --surface: #FFFFFF; --surface-2: #E4E7FB;
+  --line: rgba(23, 22, 59, 0.10); --line-strong: rgba(23, 22, 59, 0.22);
+  --text: #17163B; --mist: #4B4D6E;
+  --accent: #4F46E5; --accent-deep: #4338CA; --on-accent: #FFFFFF;
+  --second: #06B6D4; --second-soft: #0E7490;
+  --navy: #17163B; --on-navy: #F7F8FF; --on-navy-soft: rgba(247, 248, 255, 0.72);
+  --band: #4F46E5; --on-band: #FFFFFF; --on-band-soft: rgba(255, 255, 255, 0.8); --band-strike: #FFFFFF;
+  --nav-bg: rgba(247, 248, 255, 0.88);
+  --accent-wash: rgba(79, 70, 229, 0.06); --accent-wash-2: rgba(79, 70, 229, 0.11);
+  --rim-mid: rgba(23, 22, 59, 0.08);
+  --field-a: #4F46E5; --field-b: #06B6D4; --field-blend: normal;
+  --deep-shadow: 0 30px 60px -28px rgba(23, 22, 59, 0.35), 0 2px 0 rgba(23, 22, 59, 0.06);
+  --signal-error: #C62828;
+  --logo-on-ground: url("assets/brand/edgevyn-logo-dark.png");
+}
+/* C. Teal & Sand: warm sand ground, deep teal actions, amber detail (calm, premium, earthy) */
+[data-theme="teal"] {
+  --bg: #F5F0E8; --bg-deep: #EDE5D8; --surface: #FFFDF9; --surface-2: #E4DACB;
+  --line: rgba(18, 52, 59, 0.12); --line-strong: rgba(18, 52, 59, 0.24);
+  --text: #12343B; --mist: #4E6166;
+  --accent: #0F766E; --accent-deep: #0B5F58; --on-accent: #FFFFFF;
+  --second: #D99A3D; --second-soft: #9A6418;
+  --navy: #12343B; --on-navy: #F5F0E8; --on-navy-soft: rgba(245, 240, 232, 0.72);
+  --band: #12343B; --on-band: #F5F0E8; --on-band-soft: rgba(245, 240, 232, 0.78); --band-strike: #D99A3D;
+  --nav-bg: rgba(245, 240, 232, 0.9);
+  --accent-wash: rgba(15, 118, 110, 0.06); --accent-wash-2: rgba(15, 118, 110, 0.11);
+  --rim-mid: rgba(18, 52, 59, 0.08);
+  --field-a: #0F766E; --field-b: #D99A3D; --field-blend: normal;
+  --deep-shadow: 0 30px 60px -28px rgba(18, 52, 59, 0.35), 0 2px 0 rgba(18, 52, 59, 0.06);
+  --signal-error: #B3261E;
+  --logo-on-ground: url("assets/brand/edgevyn-logo-dark.png");
+}
+/* D. Navy & Crimson: dark slate navy, crimson actions (bold, confident) */
+[data-theme="crimson"] {
+  --bg: #0F172A; --bg-deep: #131C33; --surface: #1A2440; --surface-2: #22304F;
+  --line: rgba(241, 245, 249, 0.10); --line-strong: rgba(241, 245, 249, 0.22);
+  --text: #F1F5F9; --mist: #AAB4C5;
+  --accent: #E11D48; --accent-deep: #BE123C; --on-accent: #FFFFFF;
+  --accent-ink: #FB7185;
+  --second: #94A3B8; --second-soft: #CBD5E1;
+  --navy: #0A101F; --on-navy: #F1F5F9; --on-navy-soft: rgba(241, 245, 249, 0.7);
+  --band: #E11D48; --on-band: #FFFFFF; --on-band-soft: #FFFFFF; --band-strike: #0F172A;
+  --nav-bg: rgba(15, 23, 42, 0.85);
+  --accent-wash: rgba(225, 29, 72, 0.08); --accent-wash-2: rgba(225, 29, 72, 0.14);
+  --rim-mid: rgba(241, 245, 249, 0.07);
+  --field-a: #64748B; --field-b: #F43F5E; --field-blend: add;
+  --deep-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.75), 0 2px 0 rgba(0, 0, 0, 0.35);
+  --signal-error: #FDA4AF;
+  --logo-on-ground: url("assets/brand/edgevyn-logo.png");
+}
+[data-theme="crimson"] .statement .w.is-edge,
+[data-theme="crimson"] .acc-head:hover,
+[data-theme="crimson"] .acc-item.is-open .acc-name,
+[data-theme="crimson"] .tags li:hover,
+[data-theme="crimson"] .ring span:nth-child(3n + 1),
+[data-theme="crimson"] .stack-list dt,
+[data-theme="crimson"] .contact-mail a,
+[data-theme="crimson"] .work-link,
+[data-theme="crimson"] .form-status.is-ok { color: var(--accent-ink); }
